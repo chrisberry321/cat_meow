@@ -1,35 +1,23 @@
 $(document).ready(function() {
+  $("#blanks form").submit(function(event) {
+    var person1Input = $("input#person1").val();
+    var uppercase = person1Input.toUpperCase();
+    // var person2Input = $("input#person2").val();
+    // var animalInput= $("input#animal").val();
+    // var exclamationInput = $("input#exclamation").val();
+    // var verbInput = $("input#verb").val();
+    // var nounInput = $("input#noun").val();
+    //
+    $(".person1").text(uppercase);
+    // $(".person2").text(person2Input);
+    // $(".animal").text(animalInput);
+    // $(".exclamation").text(exclamationInput);
+    // $(".verb").text(verbInput);
+    // $(".noun").text(nounInput);
 
-  // $("button#hello").click(function() {
-  //   $("ul#user").prepend("<li>Hello!</li>");
-  //   $("ul#webpage").prepend("<li>Why hello there!</li>");
-  //   $("ul#user").children("li").first().click(function() {
-  //     alert('hi');
-  //   });
-  //   $("ul#webpage").children("li").first().click(function() {
-  //     $(this).remove();
-  //   });
-  // });
+    $("#story").show();
 
-  $("button#cat").click(function() {
-    $("ul#cat").prepend("<li><img src='images/kitten.jpg' alt='kitten'>'Meow'</li>");
-    // $("ul#webpage").prepend("<li>Goodbye, dear user!</li>");
-    $("ul#cat").children("li").first().click(function() {
-      $(this).remove();
-    });
-    // $("ul#webpage").children("li").first().click(function() {
-    //   $(this).remove();
-    });
-  // });
 
-  $("button#dog").click(function() {
-    $("ul#dog").prepend("<li><img src='images/puppy.jpg' alt='kitten'>'Bark'</li>");
-    // $("ul#webpage").prepend("<li>Pardon me. I meant no offense.</li>");
-    $("ul#dog").children("li").first().click(function() {
-      $(this).remove();
-    });
-    // $("ul#webpage").children("li").first().click(function() {
-    //   $(this).remove();
-    // });
-    });
+    event.preventDefault();
+  });
 });
